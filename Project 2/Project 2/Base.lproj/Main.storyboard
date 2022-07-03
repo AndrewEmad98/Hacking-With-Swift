@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZOU-gJ-RcX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFz-EM-E4e">
+                                <rect key="frame" x="20" y="58" width="79" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Sq9-LC-KSO"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="79" id="n5y-0g-2TW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNl-4n-NUX">
+                                <rect key="frame" x="107" y="100" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="7WX-Vx-fsw"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="hUc-Jx-tr0"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="estonia"/>
+                                <connections>
+                                    <action selector="flagPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vtx-Av-c1v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLy-bF-ADQ">
+                                <rect key="frame" x="107" y="230" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Cnu-hs-I8m"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="uf4-Zz-fw7"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="france"/>
+                                <connections>
+                                    <action selector="flagPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HsL-tR-qRi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gS-fO-Chj">
+                                <rect key="frame" x="107" y="360" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="cNK-Vn-kwd"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="e3P-Au-hLC"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="germany"/>
+                                <connections>
+                                    <action selector="flagPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="746-SC-Emt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DLy-bF-ADQ" firstAttribute="centerX" secondItem="gNl-4n-NUX" secondAttribute="centerX" id="5Rd-2q-6eC"/>
+                            <constraint firstItem="4gS-fO-Chj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L4z-To-itH"/>
+                            <constraint firstItem="DLy-bF-ADQ" firstAttribute="top" secondItem="gNl-4n-NUX" secondAttribute="bottom" constant="30" id="Nfe-cZ-w5O"/>
+                            <constraint firstItem="4gS-fO-Chj" firstAttribute="top" secondItem="DLy-bF-ADQ" secondAttribute="bottom" constant="30" id="Sb2-GP-kiG"/>
+                            <constraint firstItem="FFz-EM-E4e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cTu-sz-Gtx"/>
+                            <constraint firstItem="gNl-4n-NUX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kE9-vQ-N4c"/>
+                            <constraint firstItem="gNl-4n-NUX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="r9H-YP-xgv"/>
+                            <constraint firstItem="FFz-EM-E4e" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="58" id="tws-xq-Sj9"/>
+                            <constraint firstItem="DLy-bF-ADQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y9p-CB-Qan"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YVP-Pj-aot"/>
+                    <connections>
+                        <outlet property="button1" destination="gNl-4n-NUX" id="tBd-Mi-Lb3"/>
+                        <outlet property="button2" destination="DLy-bF-ADQ" id="ad8-Mf-c49"/>
+                        <outlet property="button3" destination="4gS-fO-Chj" id="8q7-gc-gqx"/>
+                        <outlet property="scoreLabel" destination="FFz-EM-E4e" id="kW3-e8-u8K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="97.767857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="35Q-LH-uAp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZOU-gJ-RcX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nR5-gv-k2t">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6vC-1f-4ro"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="36M-Cm-RbY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-412" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="estonia" width="200" height="100"/>
+        <image name="france" width="200" height="100"/>
+        <image name="germany" width="200" height="100"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
