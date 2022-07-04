@@ -49,13 +49,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HWy-3u-LZI">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HWy-3u-LZI">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HWy-3u-LZI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8ey-Bh-uKl"/>
+                            <constraint firstAttribute="bottom" secondItem="HWy-3u-LZI" secondAttribute="bottom" id="e7r-cM-XrM"/>
+                            <constraint firstItem="HWy-3u-LZI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rTU-35-cUV"/>
+                            <constraint firstItem="HWy-3u-LZI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zKT-0Q-Nyt"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DlK-ls-Zp3">
                         <barButtonItem key="rightBarButtonItem" image="square.and.arrow.up" catalog="system" id="3P7-w5-yrA">
