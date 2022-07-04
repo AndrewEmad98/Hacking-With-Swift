@@ -17,16 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFz-EM-E4e">
-                                <rect key="frame" x="20" y="58" width="79" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Sq9-LC-KSO"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="79" id="n5y-0g-2TW"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNl-4n-NUX">
                                 <rect key="frame" x="107" y="100" width="200" height="100"/>
                                 <constraints>
@@ -71,19 +61,21 @@
                             <constraint firstItem="4gS-fO-Chj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L4z-To-itH"/>
                             <constraint firstItem="DLy-bF-ADQ" firstAttribute="top" secondItem="gNl-4n-NUX" secondAttribute="bottom" constant="30" id="Nfe-cZ-w5O"/>
                             <constraint firstItem="4gS-fO-Chj" firstAttribute="top" secondItem="DLy-bF-ADQ" secondAttribute="bottom" constant="30" id="Sb2-GP-kiG"/>
-                            <constraint firstItem="FFz-EM-E4e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cTu-sz-Gtx"/>
                             <constraint firstItem="gNl-4n-NUX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kE9-vQ-N4c"/>
                             <constraint firstItem="gNl-4n-NUX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="r9H-YP-xgv"/>
-                            <constraint firstItem="FFz-EM-E4e" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="58" id="tws-xq-Sj9"/>
                             <constraint firstItem="DLy-bF-ADQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y9p-CB-Qan"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="YVP-Pj-aot"/>
+                    <navigationItem key="navigationItem" id="YVP-Pj-aot">
+                        <barButtonItem key="rightBarButtonItem" title="Score :" id="ccP-Mr-HK3">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="button1" destination="gNl-4n-NUX" id="tBd-Mi-Lb3"/>
                         <outlet property="button2" destination="DLy-bF-ADQ" id="ad8-Mf-c49"/>
                         <outlet property="button3" destination="4gS-fO-Chj" id="8q7-gc-gqx"/>
-                        <outlet property="scoreLabel" destination="FFz-EM-E4e" id="kW3-e8-u8K"/>
+                        <outlet property="rightBarButtonItem" destination="ccP-Mr-HK3" id="Kve-aH-vhl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

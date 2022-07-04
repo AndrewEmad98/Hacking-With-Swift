@@ -9,7 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var scoreLabel: UILabel!
+
+
+    @IBOutlet weak var rightBarButtonItem: UIBarButtonItem!
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
@@ -34,7 +36,6 @@ class ViewController: UIViewController {
         button3.layer.borderWidth = 1
         button3.layer.borderColor = UIColor.lightGray.cgColor
         
-        
         askQuestion()
         
     }
@@ -52,7 +53,7 @@ class ViewController: UIViewController {
         
         correctAnswer = Int.random(in: 0...2)
         title = countries[correctAnswer].uppercased()
-        scoreLabel.text = "score : \(score)"
+        rightBarButtonItem.title = "score : \(score)"
         askedQuestions += 1
     }
 
