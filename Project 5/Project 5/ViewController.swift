@@ -14,11 +14,11 @@ class ViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         readData()
         initializeUI()
         startGame()
     }
+    
     func readData(){
         /*if let resourcePath = Bundle.main.path(forResource: "start", ofType: "txt"){
             if let fileData = try? String(contentsOfFile: resourcePath) {

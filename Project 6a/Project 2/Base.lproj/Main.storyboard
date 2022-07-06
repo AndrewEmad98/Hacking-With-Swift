@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZOU-gJ-RcX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNl-4n-NUX">
+                                <rect key="frame" x="107" y="100" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gNl-4n-NUX" secondAttribute="height" multiplier="2:1" id="9fB-13-eO7"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="estonia"/>
+                                <connections>
+                                    <action selector="flagPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vtx-Av-c1v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLy-bF-ADQ">
+                                <rect key="frame" x="107" y="230" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DLy-bF-ADQ" secondAttribute="height" multiplier="2:1" id="dPV-xj-WUc"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="france"/>
+                                <connections>
+                                    <action selector="flagPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HsL-tR-qRi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gS-fO-Chj">
+                                <rect key="frame" x="107" y="360" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4gS-fO-Chj" secondAttribute="height" multiplier="2:1" id="eNp-x2-vlA"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="germany"/>
+                                <connections>
+                                    <action selector="flagPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="746-SC-Emt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4gS-fO-Chj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F6g-Px-2dx"/>
+                            <constraint firstItem="DLy-bF-ADQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K2j-Ac-dRd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4gS-fO-Chj" secondAttribute="bottom" constant="10" id="SBT-PD-AYX"/>
+                            <constraint firstItem="4gS-fO-Chj" firstAttribute="height" secondItem="DLy-bF-ADQ" secondAttribute="height" id="dKB-AY-eqm"/>
+                            <constraint firstItem="DLy-bF-ADQ" firstAttribute="height" secondItem="gNl-4n-NUX" secondAttribute="height" id="haa-Ck-l2V"/>
+                            <constraint firstItem="gNl-4n-NUX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k4P-VM-gHZ"/>
+                            <constraint firstItem="DLy-bF-ADQ" firstAttribute="top" secondItem="gNl-4n-NUX" secondAttribute="bottom" constant="30" id="lQa-yL-1Qt"/>
+                            <constraint firstItem="4gS-fO-Chj" firstAttribute="top" secondItem="DLy-bF-ADQ" secondAttribute="bottom" constant="30" id="lQc-Ct-bfc"/>
+                            <constraint firstItem="gNl-4n-NUX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="mOD-JQ-nLQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YVP-Pj-aot">
+                        <barButtonItem key="leftBarButtonItem" title="Score :" id="ccP-Mr-HK3">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="button1" destination="gNl-4n-NUX" id="tBd-Mi-Lb3"/>
+                        <outlet property="button2" destination="DLy-bF-ADQ" id="ad8-Mf-c49"/>
+                        <outlet property="button3" destination="4gS-fO-Chj" id="8q7-gc-gqx"/>
+                        <outlet property="rightBarButtonItem" destination="ccP-Mr-HK3" id="Kve-aH-vhl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="97.767857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="35Q-LH-uAp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZOU-gJ-RcX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nR5-gv-k2t">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6vC-1f-4ro"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="36M-Cm-RbY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-412" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="estonia" width="200" height="100"/>
+        <image name="france" width="200" height="100"/>
+        <image name="germany" width="200" height="100"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
