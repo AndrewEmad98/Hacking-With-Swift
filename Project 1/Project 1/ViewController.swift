@@ -19,6 +19,11 @@ class ViewController: UITableViewController {
         title = "StormViewer"
         navigationController?.navigationBar.prefersLargeTitles = true
     
+        performSelector(inBackground: #selector(fetchImages), with: nil)
+        
+    }
+    
+    @objc func fetchImages(){
         let path = Bundle.main.resourcePath!
         let items = try! FileManager.default.contentsOfDirectory(atPath: path)
         
@@ -29,8 +34,10 @@ class ViewController: UITableViewController {
         }
         pictures = pictures.sorted(by: <)
         
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
+        }
     }
-    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailsViewController {

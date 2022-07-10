@@ -129,7 +129,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadLevel()
+        performSelector(inBackground: #selector(loadLevel), with: nil)
     }
 
     @objc func submitTapped(_ sender : UIButton){
@@ -185,7 +185,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func loadLevel(){
+    @objc func loadLevel(){
         var clueString = "" // 1. Ghosts in residence
         var clueAnswerByNumberOfLetters = "" // 6 letters
         var letterBits = [String]() // ["HA","UNT","ED"]
@@ -207,15 +207,18 @@ class ViewController: UIViewController {
                 }
             }
         }
-        cluesLabel.text = clueString.trimmingCharacters(in: .whitespacesAndNewlines)
-        answerLabel.text = clueAnswerByNumberOfLetters.trimmingCharacters(in: .whitespacesAndNewlines)
-        letterBits.shuffle()
-        
-        if letterBits.count == letterButtons.count {
-            for i in 0 ..< letterButtons.count {
-                letterButtons[i].setTitle(letterBits[i], for: .normal)
+        DispatchQueue.main.async { [weak self] in
+            self?.cluesLabel.text = clueString.trimmingCharacters(in: .whitespacesAndNewlines)
+            self?.answerLabel.text = clueAnswerByNumberOfLetters.trimmingCharacters(in: .whitespacesAndNewlines)
+            letterBits.shuffle()
+            if letterBits.count == self?.letterButtons.count {
+                guard let size = self?.letterButtons.count else {return}
+                for i in 0 ..< size {
+                    self?.letterButtons[i].setTitle(letterBits[i], for: .normal)
+                }
             }
         }
+        
     }
 }
 
