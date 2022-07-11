@@ -129,7 +129,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        performSelector(inBackground: #selector(loadLevel), with: nil)
+        //performSelector(inBackground: #selector(loadLevel), with: nil)
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            self?.loadLevel()
+        }
     }
 
     @objc func submitTapped(_ sender : UIButton){
