@@ -165,7 +165,8 @@ class ViewController: UIViewController {
     @objc func clearTapped(_ sender : UIButton){
         currentAnswer.text = ""
         for btn in activatedButtons {
-            btn.isHidden = false
+            //btn.isHidden = false
+            btn.alpha = 1
         }
         activatedButtons.removeAll()
     }
@@ -174,7 +175,10 @@ class ViewController: UIViewController {
         guard let buttonTitle = sender.titleLabel?.text else {return}
         currentAnswer.text?.append(buttonTitle)
         activatedButtons.append(sender)
-        sender.isHidden = true
+        //sender.isHidden = true
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations:{
+            sender.alpha = 0
+        }){ _ in}
     }
     
     func levelUp(action: UIAlertAction) {
@@ -184,7 +188,8 @@ class ViewController: UIViewController {
         loadLevel()
 
         for btn in letterButtons {
-            btn.isHidden = false
+            //btn.isHidden = false
+            btn.alpha = 1
         }
     }
     
