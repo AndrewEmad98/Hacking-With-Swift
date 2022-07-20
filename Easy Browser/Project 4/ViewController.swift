@@ -54,7 +54,6 @@ class ViewController: UIViewController,WKNavigationDelegate {
         navigationController?.isToolbarHidden = false
         
 
-
     }
     @objc func goToBackwardPage(){
         webView.goBack()
