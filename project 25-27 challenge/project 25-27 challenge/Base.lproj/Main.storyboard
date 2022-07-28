@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="project_25_27_challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DVc-8H-L5v">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRF-eu-aV2">
+                                <rect key="frame" x="320.5" y="993" width="127.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Set Bottom Text"/>
+                                <connections>
+                                    <action selector="setTextTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xrt-Ff-CuI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ckh-61-fmh">
+                                <rect key="frame" x="622" y="993" width="116" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Import Picture"/>
+                                <connections>
+                                    <action selector="importPictureTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mnx-Gj-yhS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2j-qy-UcQ">
+                                <rect key="frame" x="30" y="993" width="104.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Set Top Text"/>
+                                <connections>
+                                    <action selector="setTextTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p5C-4m-wV4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DVc-8H-L5v" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Gaq-ad-wKT"/>
+                            <constraint firstItem="MRF-eu-aV2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Lkq-eS-naf"/>
+                            <constraint firstItem="c2j-qy-UcQ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="T0R-O4-0gT"/>
+                            <constraint firstItem="MRF-eu-aV2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UnA-bf-NoC"/>
+                            <constraint firstItem="c2j-qy-UcQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="cDg-Bh-PUq"/>
+                            <constraint firstAttribute="trailing" secondItem="DVc-8H-L5v" secondAttribute="trailing" id="dBB-7r-nYM"/>
+                            <constraint firstItem="Ckh-61-fmh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="t7c-r1-FFF"/>
+                            <constraint firstItem="DVc-8H-L5v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wnj-QP-8MG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ckh-61-fmh" secondAttribute="trailing" constant="30" id="xKg-mV-Ln2"/>
+                            <constraint firstAttribute="bottom" secondItem="DVc-8H-L5v" secondAttribute="bottom" id="zF4-HN-8I0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="DVc-8H-L5v" id="Oyb-wA-hLL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
